@@ -13,30 +13,29 @@ body {
     color: white;
 }
 
-/* FULL SCREEN HERO */
+/* HERO */
 .hero {
-    height: 100vh; /* 🔥 CAŁY EKRAN */
+    height: 100vh;
     background-image: url("zdjdom.png");
     background-size: cover;
     background-position: center;
     position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
+    align-items: center;
 }
 
-/* CZARNY GRADIENT */
+/* GRADIENT OD DOŁU */
 .hero::after {
     content: "";
     position: absolute;
     inset: 0;
-
     background: linear-gradient(
         to bottom,
         rgba(0,0,0,0.2) 0%,
-        rgba(0,0,0,0.7) 60%,
-        rgba(0,0,0,1) 100%
+        rgba(0,0,0,0.4) 40%,
+        rgba(0,0,0,0.95) 100%
     );
 }
 
@@ -44,20 +43,21 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
-    padding: 20px;
+    text-align: center;
+    max-width: 900px;
 }
 
 .hero h1 {
     font-size: 42px;
     font-weight: 300;
     letter-spacing: 2px;
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 .hero p {
     font-size: 20px;
-    margin: 10px 0;
+    margin: 6px 0;
 }
 
 .phone {
@@ -66,29 +66,23 @@ body {
     font-weight: bold;
 }
 
-.phone:hover {
-    text-decoration: underline;
-}
-
-/* CONTENT BELOW */
-.content {
-    padding: 40px;
-    text-align: center;
-    background: black;
-}
-
+/* WIDEO NA ZDJĘCIU */
 .videos {
+    position: relative;
+    z-index: 2;
+    margin-top: 30px;
     display: flex;
     gap: 20px;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .videos iframe {
     width: 320px;
     height: 200px;
-    border-radius: 10px;
     border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 </style>
 </head>
@@ -96,6 +90,7 @@ body {
 <body>
 
 <div class="hero">
+
     <div class="hero-content">
         <h1>Posiadłość dostępem do wody</h1>
 
@@ -108,20 +103,17 @@ body {
             </a>
         </p>
     </div>
-</div>
 
-<div class="content">
-    <h2>Filmy</h2>
-
+    <!-- FILMY NA TLE ZDJĘCIA -->
     <div class="videos">
         <iframe src="https://www.youtube.com/embed/8mmcE5cJbPk" allowfullscreen></iframe>
         <iframe src="https://www.youtube.com/embed/SXrAVw8Vk7g" allowfullscreen></iframe>
         <iframe src="https://www.youtube.com/embed/-JSieEDJieE" allowfullscreen></iframe>
     </div>
+
 </div>
 
 </body>
 </html>
-
 </body>
 </html>
