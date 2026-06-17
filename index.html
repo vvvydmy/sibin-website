@@ -8,14 +8,14 @@
 <style>
 body {
     margin: 0;
-    font-family: Inter, sans-serif;
+    font-family: Arial, sans-serif;
     background: black;
     color: white;
 }
 
-/* HERO */
+/* FULL SCREEN HERO */
 .hero {
-    height: 70vh;
+    height: 100vh; /* 🔥 CAŁY EKRAN */
     background-image: url("zdjdom.png");
     background-size: cover;
     background-position: center;
@@ -31,10 +31,12 @@ body {
     content: "";
     position: absolute;
     inset: 0;
+
     background: linear-gradient(
         to bottom,
         rgba(0,0,0,0.2) 0%,
-        rgba(0,0,0,0.9) 100%
+        rgba(0,0,0,0.7) 60%,
+        rgba(0,0,0,1) 100%
     );
 }
 
@@ -47,13 +49,15 @@ body {
 }
 
 .hero h1 {
-    font-size: 38px;
-    margin-bottom: 15px;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .hero p {
     font-size: 20px;
-    margin: 8px 0;
+    margin: 10px 0;
 }
 
 .phone {
@@ -66,7 +70,7 @@ body {
     text-decoration: underline;
 }
 
-/* SEK CJA */
+/* CONTENT BELOW */
 .content {
     padding: 40px;
     text-align: center;
@@ -83,8 +87,8 @@ body {
 .videos iframe {
     width: 320px;
     height: 200px;
-    border: none;
     border-radius: 10px;
+    border: none;
 }
 </style>
 </head>
@@ -107,12 +111,17 @@ body {
 </div>
 
 <div class="content">
+    <h2>Filmy</h2>
+
     <div class="videos">
         <iframe src="https://www.youtube.com/embed/8mmcE5cJbPk" allowfullscreen></iframe>
         <iframe src="https://www.youtube.com/embed/SXrAVw8Vk7g" allowfullscreen></iframe>
         <iframe src="https://www.youtube.com/embed/-JSieEDJieE" allowfullscreen></iframe>
     </div>
 </div>
+
+</body>
+</html>
 
 </body>
 </html>
