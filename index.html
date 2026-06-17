@@ -13,17 +13,20 @@ body {
     color: white;
 }
 
-/* HERO */
+/* CAŁA SEKCJA */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("zdjdom.png");
     background-size: cover;
     background-position: center;
     position: relative;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 /* GRADIENT OD DOŁU */
@@ -34,30 +37,30 @@ body {
     background: linear-gradient(
         to bottom,
         rgba(0,0,0,0.2) 0%,
-        rgba(0,0,0,0.4) 40%,
+        rgba(0,0,0,0.6) 50%,
         rgba(0,0,0,0.95) 100%
     );
 }
 
-/* TEKST */
-.hero-content {
+/* wszystko nad gradientem */
+.content {
     position: relative;
     z-index: 2;
-    text-align: center;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
-.hero h1 {
+/* TEKST */
+h1 {
     font-size: 42px;
     font-weight: 300;
     letter-spacing: 2px;
-    margin-bottom: 10px;
     text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
-.hero p {
+p {
     font-size: 20px;
-    margin: 6px 0;
+    margin: 8px 0;
 }
 
 .phone {
@@ -66,23 +69,22 @@ body {
     font-weight: bold;
 }
 
-/* WIDEO NA ZDJĘCIU */
+/* FILMY POD TEKSTEM */
 .videos {
-    position: relative;
-    z-index: 2;
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
+    flex-direction: column; /* 🔥 jedno pod drugim */
     gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
 }
 
 .videos iframe {
-    width: 320px;
-    height: 200px;
+    width: 80vw;
+    max-width: 700px;
+    height: 380px;
     border: none;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 </style>
 </head>
@@ -91,7 +93,8 @@ body {
 
 <div class="hero">
 
-    <div class="hero-content">
+    <div class="content">
+
         <h1>Posiadłość dostępem do wody</h1>
 
         <p>Cena: 9.999.999,- PLN</p>
@@ -102,18 +105,20 @@ body {
                 +48 609 113 055
             </a>
         </p>
-    </div>
 
-    <!-- FILMY NA TLE ZDJĘCIA -->
-    <div class="videos">
-        <iframe src="https://www.youtube.com/embed/8mmcE5cJbPk" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/SXrAVw8Vk7g" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/-JSieEDJieE" allowfullscreen></iframe>
+        <div class="videos">
+
+            <iframe src="https://www.youtube.com/embed/8mmcE5cJbPk" allowfullscreen></iframe>
+
+            <iframe src="https://www.youtube.com/embed/SXrAVw8Vk7g" allowfullscreen></iframe>
+
+            <iframe src="https://www.youtube.com/embed/-JSieEDJieE" allowfullscreen></iframe>
+
+        </div>
+
     </div>
 
 </div>
 
-</body>
-</html>
 </body>
 </html>
