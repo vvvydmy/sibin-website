@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sibin</title>
+<title>Posiadłość</title>
 
 <style>
 body {
@@ -26,42 +26,47 @@ body {
     color: white;
 }
 
-/* gradient (czarny) */
+/* CZARNY GRADIENT */
 .hero::after {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(0,0,0,0.2) 0%,
-        rgba(0,0,0,0.85) 100%
+        rgba(0,0,0,0.3) 0%,
+        rgba(0,0,0,0.8) 100%
     );
 }
 
-/* tekst na hero */
+/* TREŚĆ NA GÓRZE */
 .hero-content {
     position: relative;
     z-index: 2;
+    max-width: 800px;
     padding: 20px;
 }
 
-.hero-content h1 {
+.hero h1 {
     font-size: 36px;
     margin-bottom: 15px;
 }
 
-.hero-content p {
-    font-size: 18px;
+.hero p {
+    font-size: 20px;
     margin: 5px 0;
 }
 
-.hero-content a {
+.phone {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* content */
+.phone:hover {
+    text-decoration: underline;
+}
+
+/* SEKCJA FILMÓW */
 .content {
     padding: 40px;
     text-align: center;
@@ -87,17 +92,21 @@ body {
 
 <div class="hero">
     <div class="hero-content">
-        <h1>Posiadłość z dostępem do wody</h1>
+        <h1>Posiadłość dostępem do wody</h1>
+
         <p>Cena: 9.999.999,- PLN</p>
+
         <p>
             Kontakt:
-            <a href="tel:+48609113055">+48 609 113 055</a>
+            <a class="phone" href="tel:+48609113055">
+                +48 609 113 055
+            </a>
         </p>
     </div>
 </div>
 
 <div class="content">
-    <h1>Moje filmy</h1>
+    <h2>Filmy</h2>
 
     <div class="videos">
 
